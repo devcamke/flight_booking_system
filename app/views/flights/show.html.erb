@@ -1,2 +1,6 @@
-<h1>Flights#show</h1>
-<p>Find me in app/views/flights/show.html.erb</p>
+<h1>Flight Details</h1>
+<p>Flight Number: <%= @flight.number %></p>
+<p>From: <%= @flight.origin %> To: <%= @flight.destination %></p>
+<p>Departure: <%= @flight.departure %></p>
+<p>Arrival: <%= @flight.arrival %></p>
+<%= link_to "Book this flight", new_flight_booking_path(@flight) %>

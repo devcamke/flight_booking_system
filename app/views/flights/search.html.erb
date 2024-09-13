@@ -1,2 +1,13 @@
-<h1>Flights#search</h1>
-<p>Find me in app/views/flights/search.html.erb</p>
+<h1>Search for Flights</h1>
+<form action="/flights/search" method="get">
+  <label for="origin">Origin:</label>
+  <input type="text" name="origin" id="origin">
+
+  <label for="destination">Destination:</label>
+  <input type="text" name="destination" id="destination">
+
+  <label for="departure_date">Departure Date:</label>
+  <input type="date" name="departure_date" id="departure_date">
+
+  <button type="submit">Search</button>
+</form>

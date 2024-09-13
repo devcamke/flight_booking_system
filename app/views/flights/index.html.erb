@@ -1,2 +1,8 @@
-<h1>Flights#index</h1>
-<p>Find me in app/views/flights/index.html.erb</p>
+<h1>Available Flights</h1>
+<% @flights.each do |flight| %>
+  <div>
+    <%= link_to flight.number, flight_path(flight) %>
+    <%= flight.origin %> to <%= flight.destination %>
+    Departure: <%= flight.departure %>
+  </div>
+<% end %>
