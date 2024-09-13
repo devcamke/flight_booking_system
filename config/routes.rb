@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  get "pages/home"
+  namespace :manager do
+    get "dashboard/index"
+  end
+  namespace :admin do
+    get "dashboard/index"
+  end
+  get "bookings/new"
+  get "bookings/create"
+  get "bookings/show"
+  get "seats/index"
+  get "seats/create"
+  get "seats/update"
+  get "flights/index"
+  get "flights/show"
+  get "flights/search"
+  get "airlines/index"
+  get "airlines/show"
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
